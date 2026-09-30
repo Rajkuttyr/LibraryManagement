@@ -4,16 +4,24 @@ import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Lending {
-    @Id 
-    long LendingId;
-    long userID;
-    long bookId;
-    Date issuedDate;
-    Date returnDate;
-    boolean returned;
-    Date returnedOn;
+
+    @Id
+    private long lendingId;
+
+    private long userId;
+    private long bookId;
+
+    private Date issuedDate;
+    private Date returnDate;
+
+    private boolean returned;
+    private Date returnedOn;
 }
